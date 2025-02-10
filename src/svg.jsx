@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 // Importation dynamique des icônes SVG
 import { ReactComponent as ReactIcon } from "./assets/svg/react-original.svg";
 import { ReactComponent as JsIcon } from "./assets/svg/javascript-original.svg";
