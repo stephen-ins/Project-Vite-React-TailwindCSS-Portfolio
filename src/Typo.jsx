@@ -1,12 +1,12 @@
 import React from "react";
-// import { Button } from "@heroui/react";
+import { TypeAnimation } from "react-type-animation";
+
 // import Button from "@material-ui/core/Button";
-// import { Image } from "@heroui/react";
 // import { Image } from "@heroui/image";
 
 export function TypographyH1() {
   return (
-    <h1 className="scroll-m-20 text-4xl mt-12 flex justify-center align-middle font-extrabold font-roboto tracking-tight lg:text-4xl">
+    <h1 className="scroll-m-20 text-5xl mt-12 flex justify-center align-middle font-extrabold antonio-font tracking-tight lg:text-4xl">
       Stephen Insixiengmay
     </h1>
   );
@@ -14,8 +14,8 @@ export function TypographyH1() {
 
 export function TypographyH2() {
   return (
-    <h2 className="scroll-m-20 text-6xl pb-2 flex justify-center text-center align-middle items-center font-stretch-semi-expanded tracking-tight font-roboto first:mt-0 mt-20">
-      Web Developer Junior
+    <h2 className="scroll-m-20 text-6xl pb-2 flex justify-center text-center align-middle items-center font-stretch-semi-expanded tracking-tight antonio-font first:mt-0 mt-20">
+      Développeur Web
     </h2>
   );
 }
@@ -33,14 +33,23 @@ export default function ButtonStyleHover() {
   );
 }
 
-// export default function ImageEffect() {
-//   return (
-//     <Image
-//       isBlurred
-//       alt="portrait__portfolio"
-//       className="m-5"
-//       src="./assets/image/portrait_portfolio.jpg"
-//       width={240}
-//     />
-//   );
-// }
+export const textAnimateComponent = () => {
+  return (
+    <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed once, initially
+        "We produce food for Mice",
+        1000,
+        "We produce food for Hamsters",
+        1000,
+        "We produce food for Guinea Pigs",
+        1000,
+        "We produce food for Chinchillas",
+        1000,
+      ]}
+      speed={50}
+      style={{ fontSize: "2em" }}
+      repeat={Infinity}
+    />
+  );
+};
