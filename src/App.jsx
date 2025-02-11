@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import "./index.css";
-import { TypographyH0, TypographyH1, TypographyH2 } from "./Typo";
+import {
+  TypographyH0,
+  TypographyH1,
+  TypographyH2,
+  TypographyH3,
+  TypographyH4,
+  TypographyH5,
+} from "./Typo";
 import projects from "./Projects";
 import QuoteComponentLeft from "./QuoteLeft";
 import QuoteComponentRight from "./QuoteRight";
+import { motion } from "framer-motion";
+import Card from "./Card";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,13 +43,19 @@ const App = () => {
 
       <header className="py-8 px-4 flex justify-between items-center  max-w-4xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
-          <div className="col-span-1 flex justify-center">
+          <motion.div
+            className="col-span-1 flex justify-center"
+            initial={{ opacity: 0.1, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 5, delay: 1 }}
+            viewport={{ once: true }}
+          >
             <img
               className=" sm:w-50  sm:h-60  md:w-40 md:h-80 lg:w-60 lg:h-100 rounded-full w-50 h-100 object-cover transition-all duration-300 filter grayscale hover:grayscale-0 cursor-pointer"
               src="/image/portrait/portrait_stephen_st-malo.jpg"
               alt="image saint malo"
             />
-          </div>
+          </motion.div>
           <div className="col-span-2 text-start flex flex-col justify-center">
             <TypographyH0 />
             <TypographyH1 />
@@ -79,29 +94,21 @@ const App = () => {
         <section id="about" className="py-16 px-4 ">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">À propos de moi</h2>
-            <p className=" text-2xl mb-8 px-8 text-justify font-roboto">
-              <QuoteComponentLeft /> Je suis
-              <strong> Stephen INSIXIENGMAY</strong>, passionné par le
-              développement informatique, je me consacre à la création de sites
-              web modernes et réactifs, en couvrant aussi bien le front-end que
-              le back-end. Ma stack couvre une gamme étendue de technologies,
-              incluant HTML, CSS, JavaScript, React, et TailwindCSS pour la
-              partie front-end, ainsi que SQL et PHP pour la partie back-end.
-              Actuellement engagé dans une formation de reconversion
-              professionnelle visant l'obtention du titre professionnel de
-              développeur web, je suis en quête d'un stage en immersion du 17
-              mars au 30 mai 2025. Ce stage me permettrait de mettre en pratique
-              les connaissances théoriques et techniques que j'ai acquises, tout
-              en m'intégrant au sein d'une équipe dynamique et innovante. Mon
-              objectif est non seulement d'obtenir mon diplôme, mais aussi de
-              contribuer de manière significative à des projets concrets et
-              d'approfondir mes compétences professionnelles dans un
-              environnement réel.
+            <p className="text-2xl text-start mb-2 letter-spacing-0.05em word-spacing-0.1em font-roboto">
+              <QuoteComponentLeft />
+              Je suis <strong>Stephen Insixiengmay</strong>,
+              <TypographyH3 />
               <QuoteComponentRight />
             </p>
 
             <div className="  flex flex-wrap justify-center space-x-4">
-              <div className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-amber-800  bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer">
+              <motion.div
+                className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-amber-800  bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer"
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl font-bold underline italic text-slate-200">
                   Hard skills
                 </h3>
@@ -117,9 +124,15 @@ const App = () => {
                   <li className="font-semibold mb-2 text-xl">SQL / NoSQL</li>
                   <li className="font-semibold mb-2 text-xl">GitHub</li>
                 </ul>
-              </div>
+              </motion.div>
 
-              <div className=" relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-neutral-200  bg-gray-300 dark:bg-gray-300 p-4 rounded-lg  m-10 cursor-pointer  flex flex-wrap justify-center space-x-4">
+              <motion.div
+                className=" relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-neutral-200  bg-gray-300 dark:bg-gray-300 p-4 rounded-lg  m-10 cursor-pointer  flex flex-wrap justify-center space-x-4"
+                initial={{ opacity: 0, x: 150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <img
                   src="/image/icone_skills/javascript-original.svg"
                   alt=""
@@ -180,11 +193,15 @@ const App = () => {
                   alt=""
                   className="h-16 w-16 m-4"
                 />
-              </div>
+              </motion.div>
 
-              {/* <div className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer "></div> */}
-
-              <div className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer ">
+              <motion.div
+                className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer "
+                initial={{ opacity: 0, y: 150 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-2xl  font-bold underline italic text-slate-200">
                   Soft skills
                 </h3>
@@ -198,7 +215,7 @@ const App = () => {
                     Travail en équipe
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
             <a
               href="#contact"
@@ -215,7 +232,13 @@ const App = () => {
             </h2>
 
             <div className="flex flex-col space-y-8 shadow-neutral-800-60 dark:shadow-neutral-800-50">
-              <div className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl">
+              <motion.div
+                className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl"
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-xl font-bold dark:text-gray-800">
                   Développeur web et web mobile (formation)
                 </h3>
@@ -243,7 +266,7 @@ const App = () => {
                 <p className="mt-2 text-start">
                   Maquettage de site avec Figma.
                 </p>
-              </div>
+              </motion.div>
 
               <p className=" mb-8 text-2xl  px-8 text-justify font-roboto">
                 <QuoteComponentLeft />
@@ -252,22 +275,17 @@ const App = () => {
                   src="/image/icone_flag_france/icons8-drapeau-français-48.png"
                   alt=""
                 />
-                Pendant ma première partie de carrière professionnelle, j'ai eu
-                l'honneur et la chance de servir mon pays en tant que militaire
-                dans l'Armée de Terre. Sous-officier de carrière, j'ai acquis de
-                solides compétences en management ainsi qu'une grande expertise
-                dans la sécurité des systèmes d'information. Mes 21 années de
-                service m'ont permis de développer ces compétences, en
-                particulier dans le domaine des télécommunications tactiques
-                militaires. Au cours de cette longue période, j'ai eu l'occasion
-                de diriger des équipes, de former des sous-officiers, de gérer
-                des projets complexes, et de contribuer à la protection des
-                infrastructures critiques, garantissant ainsi la sécurité des
-                communications et des informations sensibles.
+                <TypographyH4 />
                 <QuoteComponentRight />
               </p>
 
-              <div className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl">
+              <motion.div
+                className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl"
+                initial={{ opacity: 0, x: 150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-xl font-bold dark:text-gray-800">
                   Responsable de travaux réseaux télécoms très haut débit
                 </h3>
@@ -289,9 +307,15 @@ const App = () => {
                   Réaliser la recette d’un chantier réseaux télécoms et
                   superviser les opérations de maintenance.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl">
+              <motion.div
+                className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl"
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-xl font-bold dark:text-gray-800">
                   Formateur concepteur pédagogique
                 </h3>
@@ -310,9 +334,15 @@ const App = () => {
                 <p className="mt-2 text-start">
                   Accompagner les apprenants et développer les compétences.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl">
+              <motion.div
+                className=" bg-white dark:bg-gray-400 p-6 rounded-lg drop-shadow-2xl"
+                initial={{ opacity: 0, x: 150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
                 <h3 className="text-xl font-bold dark:text-gray-800">
                   Chef d'équipe d'exploitation et de maintenance des systèmes
                   d'information et de télécommunications
@@ -333,7 +363,7 @@ const App = () => {
                 </p>
                 <p className="mt-2 text-start">Gestion de stock.</p>
                 <p className="mt-2 text-start">Manager une équipe.</p>
-              </div>
+              </motion.div>
             </div>
             <div className="flex mt-10 flex-col space-y-8 shadow-neutral-800-60 dark:shadow-neutral-800-50">
               <a
@@ -342,7 +372,7 @@ const App = () => {
                 rel="noopener noreferrer"
                 className="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4  rounded"
               >
-                Charger le CV
+                Charger mon CV
               </a>
             </div>
           </div>
@@ -354,15 +384,7 @@ const App = () => {
             </h2>
             <p className=" mb-10 text-2xl px-8 text-justify font-roboto">
               <QuoteComponentLeft />
-              Bienvenue dans mon univers de développement web, où chaque projet
-              devient une aventure inoubliable ! Avec une créativité débordante,
-              une autonomie affirmée, et un sens du détail minutieux, je
-              transforme des idées en expériences numériques immersives. En
-              respectant rigoureusement les standards et en faisant preuve d'une
-              adaptabilité face aux défis du web moderne, je travaille
-              efficacement en équipe pour proposer des solutions novatrices et
-              impeccables. Chaque projet me nourrit et me pousse à grandir, à
-              apprendre et à développer de nouvelles compétences.
+              <TypographyH5 />
               <QuoteComponentRight />
             </p>
 
@@ -401,7 +423,13 @@ const App = () => {
           className="py-16 px-4 bg-gray-100 dark:bg-gray-700 w-full"
         >
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Contactez-moi</h2>
+            {/* <h2 className="text-3xl font-bold mb-8">Contactez-moi</h2> */}
+            <h2 className="text-2xl font-bold text-red-400 mb-8">
+              "Le serveur de messagerie est en cours de maintenance !"
+            </h2>
+            <h2 className="text-2xl font-bold text-gray-50-400 mb-8">
+              "Veuillez me contacter via mes coordonnées en bas de page"
+            </h2>
             <form className="max-w-md mx-auto">
               <div className="mb-4">
                 <label
