@@ -23,14 +23,6 @@ export function TypographyH1() {
   );
 }
 
-// export function TypographyH2() {
-//   return (
-//     <h2 className="scroll-m-20 text-6xl pb-2 flex justify-center text-center align-middle items-center font-stretch-semi-expanded tracking-tight antonio-font first:mt-0 mt-20">
-//       Développeur Web
-//     </h2>
-//   );
-// }
-
 export function TypographyH2() {
   return (
     <TypeAnimation
