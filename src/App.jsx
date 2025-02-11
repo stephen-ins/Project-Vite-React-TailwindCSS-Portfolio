@@ -80,7 +80,8 @@ const App = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">À propos de moi</h2>
             <p className=" text-2xl mb-8 px-8 text-justify font-roboto">
-              <QuoteComponentLeft /> Guidé par une véritable passion pour le
+              <QuoteComponentLeft /> Je suis
+              <strong> Stephen INSIXIENGMAY</strong>, passionné par le
               développement informatique, je me consacre à la création de sites
               web modernes et réactifs, en couvrant aussi bien le front-end que
               le back-end. Ma stack couvre une gamme étendue de technologies,
