@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-import { TypographyH1, TypographyH2 } from "./Typo";
+import { TypographyH0, TypographyH1, TypographyH2 } from "./Typo";
 import projects from "./Projects";
 import QuoteComponentLeft from "./QuoteLeft";
 import QuoteComponentRight from "./QuoteRight";
@@ -42,6 +42,7 @@ const App = () => {
             />
           </div>
           <div className="col-span-2 text-start flex flex-col justify-center">
+            <TypographyH0 />
             <TypographyH1 />
             <TypographyH2 />
             <div className=" align-middle justify-center mx-auto mt-20 md:w-125 sm:grid-cols-2 md:flex md:mx-0 md:justify-center md:contents-center  sm:w-70 lg:w-full text-start space-x-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">

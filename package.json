@@ -26,6 +26,7 @@
     "react-devicon": "^0.1.9",
     "react-devtools": "^6.1.0",
     "react-dom": "^18.3.1",
+    "react-type-animation": "^3.2.0",
     "vite-plugin-svgr": "^4.3.0"
   },
   "devDependencies": {
