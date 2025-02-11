@@ -121,136 +121,135 @@ const App = () => {
                 <img
                   src="/image/icone_skills/javascript-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/react-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/php-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/mysql-original-wordmark.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/symfony-original-wordmark.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
-
                 <img
                   src="/image/icone_skills/nodejs-original-wordmark.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/html5-original-wordmark.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/css3-original-wordmark.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/bootstrap-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/tailwindcss-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/sass-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-
-                <img
-                  src="/image/icone_skills/linux-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-
-                <img
-                  src="/image/icone_skills/bash-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/apple-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/windows11-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/github-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-
-                <img
-                  src="/image/icone_skills/vitejs-original.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/vscode-original-wordmark.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
-                />
-                <img
-                  src="/image/icone_skills/npm-original-wordmark.svg"
-                  alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
                 <img
                   src="/image/icone_skills/figma-original.svg"
                   alt=""
-                  className="h-12 w-12 m-4"
+                  className="h-16 w-16 m-4"
                 />
-
                 <img
+                  src="/image/icone_skills/github-original.svg"
+                  alt=""
+                  className="h-16 w-16 m-4"
+                />
+                {/* <img
+                  src="/image/icone_skills/sass-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+
+                {/* <img
+                  src="/image/icone_skills/linux-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+
+                {/* <img
+                  src="/image/icone_skills/bash-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+                {/* <img
+                  src="/image/icone_skills/apple-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+                {/* <img
+                  src="/image/icone_skills/windows11-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+
+                {/* <img
+                  src="/image/icone_skills/vitejs-original.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+                {/* <img
+                  src="/image/icone_skills/vscode-original-wordmark.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+                {/* <img
+                  src="/image/icone_skills/npm-original-wordmark.svg"
+                  alt=""
+                  className="h-12 w-12 m-4"
+                /> */}
+
+                {/* <img
                   src="/image/icone_skills/canva-original.svg"
                   alt=""
                   className="h-12 w-12 m-4"
-                />
+                /> */}
 
-                <img
+                {/* <img
                   src="/image/icone_skills/stackoverflow-original-wordmark.svg"
                   alt=""
                   className="h-12 w-12 m-4"
-                />
+                /> */}
 
-                <img
+                {/* <img
                   src="/image/icone_skills/notion-original.svg"
                   alt=""
                   className="h-12 w-12 m-4"
-                />
-                <img
+                /> */}
+                {/* <img
                   src="/image/icone_skills/slack-original.svg"
                   alt=""
                   className="h-12 w-12 m-4"
-                />
+                /> */}
 
-                <img
+                {/* <img
                   src="/image/icone_skills/chrome-original.svg"
                   alt=""
                   className="h-12 w-12 m-4"
-                />
+                /> */}
               </div>
 
               {/* <div className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer "></div> */}
