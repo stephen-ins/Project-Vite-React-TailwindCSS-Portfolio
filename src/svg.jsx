@@ -22,5 +22,29 @@ import { ReactComponent as UbuntuIcon } from "./assets/svg/ubuntu-original-wordm
 import { ReactComponent as ViteIcon } from "./assets/svg/vite-original-wordmark.svg";
 import { ReactComponent as VscodeIcon } from "./assets/svg/vscode-original-wordmark.svg";
 import { ReactComponent as WindowsIcon } from "./assets/svg/windows11-original.svg";
+import { ReactComponent as SqlIcon } from "./assets/svg/sql-original.svg";
 
-// export default Svg;
+const Svg = {
+  ReactIcon,
+  JsIcon,
+  HtmlIcon,
+  CssIcon,
+  NodeIcon,
+  AppleIcon,
+  BootstrapIcon,
+  GithubIcon,
+  LinkedinIcon,
+  LinuxIcon,
+  MySqlIcon,
+  SassIcon,
+  NpmIcon,
+  PhpIcon,
+  TailwindIcon,
+  UbuntuIcon,
+  ViteIcon,
+  VscodeIcon,
+  WindowsIcon,
+  SqlIcon,
+};
+
+export default Svg;

@@ -4,6 +4,7 @@ import {
   TypographyH0,
   TypographyH1,
   TypographyH2,
+  TypographyH2bis,
   TypographyH3,
   TypographyH4,
   TypographyH5,
@@ -13,6 +14,7 @@ import QuoteComponentLeft from "./QuoteLeft";
 import QuoteComponentRight from "./QuoteRight";
 import { motion } from "framer-motion";
 import Card from "./Card";
+import ContactForm from "./form";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +27,7 @@ const App = () => {
     <div
       className={`${
         darkMode ? "bg-gray-900 text-white" : "bg-zinc-100 text-gray-900"
-      } transition-colors duration-300 min-h-screen flex flex-col items-center`}
+      } transition-colors duration-300 min-h-screen flex flex-col items-center overflow-x-hidden`}
     >
       <label
         htmlFor="AcceptConditions"
@@ -51,7 +53,7 @@ const App = () => {
             viewport={{ once: true }}
           >
             <img
-              className=" sm:w-50  sm:h-60  md:w-40 md:h-80 lg:w-60 lg:h-100 rounded-full w-50 h-100 object-cover transition-all duration-300 filter grayscale hover:grayscale-0 cursor-pointer"
+              className=" sm:w-50 sm:h-60 md:w-40 md:h-80 lg:w-60 lg:h-100 rounded-full w-50 h-100 object-cover"
               src="/image/portrait/portrait_stephen_st-malo.jpg"
               alt="image saint malo"
             />
@@ -60,7 +62,8 @@ const App = () => {
             <TypographyH0 />
             <TypographyH1 />
             <TypographyH2 />
-            <div className=" align-middle justify-center mx-auto mt-20 md:w-125 sm:grid-cols-2 md:flex md:mx-0 md:justify-center md:contents-center  sm:w-70 lg:w-full text-start space-x-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <TypographyH2bis />
+            <div className="align-middle justify-center mx-auto mt-20 md:w-125 sm:grid-cols-2 md:flex md:mx-0 md:justify-center md:contents-center sm:w-70 lg:w-full text-start md:space-x-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
               <a
                 href="#about"
                 className=" h-12 flex items-center  w-full justify-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
@@ -94,7 +97,7 @@ const App = () => {
         <section id="about" className="py-16 px-4 ">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">À propos de moi</h2>
-            <p className="text-2xl text-start mb-2 letter-spacing-0.05em word-spacing-0.1em font-roboto">
+            <p className="text-2xl text-start mb-2 letter-spacing-0.05em word-spacing-0.1em font-roboto text-2xl sm:text-2xl md:text-2xl">
               <QuoteComponentLeft />
               Je suis <strong>Stephen Insixiengmay</strong>,
               <TypographyH3 />
@@ -103,7 +106,7 @@ const App = () => {
 
             <div className="  flex flex-wrap justify-center space-x-4">
               <motion.div
-                className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-amber-800  bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer"
+                className="relative overflow-visible hover:-translate-y-1 px-2 sm:px-6 md:px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-amber-800 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg m-2 sm:m-6 md:m-10 cursor-pointer"
                 initial={{ opacity: 0, x: -150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.3 }}
@@ -113,21 +116,22 @@ const App = () => {
                   Hard skills
                 </h3>
                 <ul className="m-1  text-start mx-10">
-                  <li className="font-semibold  mb-2 text-xl">
-                    JavaScript / React
-                  </li>
+                  <li className="font-semibold  mb-2 text-xl">HTML</li>
                   <li className="font-semibold mb-2 text-xl">
-                    TailwindCSS / Bootstrap
+                    CSS / Tailwind / Bootstrap / Sass
                   </li>
-                  <li className="font-semibold mb-2 text-xl">HTML / CSS</li>
-                  <li className="font-semibold mb-2 text-xl">PHP / Symfony</li>
+                  <li className="font-semibold mb-2 text-xl">JavaScript</li>
+                  <li className="font-semibold mb-2 text-xl">ReactJS</li>
+                  <li className="font-semibold mb-2 text-xl">PHP</li>
+                  <li className="font-semibold mb-2 text-xl">Symfony</li>
                   <li className="font-semibold mb-2 text-xl">SQL / NoSQL</li>
-                  <li className="font-semibold mb-2 text-xl">GitHub</li>
+                  <li className="font-semibold mb-2 text-xl">Git / GitHub</li>
+                  <li className="font-semibold mb-2 text-xl">Figma</li>
                 </ul>
               </motion.div>
 
               <motion.div
-                className=" relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0  hover:bg-neutral-200  bg-gray-300 dark:bg-gray-300 p-4 rounded-lg  m-10 cursor-pointer  flex flex-wrap justify-center space-x-4"
+                className="relative overflow-visible hover:-translate-y-1 px-2 sm:px-6 md:px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-neutral-200 bg-gray-300 dark:bg-gray-300 p-4 rounded-lg m-2 sm:m-6 md:m-10 cursor-pointer  flex flex-wrap justify-center space-x-4"
                 initial={{ opacity: 0, x: 150 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.3 }}
@@ -149,7 +153,7 @@ const App = () => {
                   className="h-16 w-16 m-4"
                 />
                 <img
-                  src="/image/icone_skills/mysql-original-wordmark.svg"
+                  src="/image/icone_skills/azuresqldatabase-original.svg"
                   alt=""
                   className="h-16 w-16 m-4"
                 />
@@ -158,11 +162,11 @@ const App = () => {
                   alt=""
                   className="h-16 w-16 m-4"
                 />
-                <img
+                {/* <img
                   src="/image/icone_skills/nodejs-original-wordmark.svg"
                   alt=""
                   className="h-16 w-16 m-4"
-                />
+                /> */}
                 <img
                   src="/image/icone_skills/html5-original-wordmark.svg"
                   alt=""
@@ -196,7 +200,7 @@ const App = () => {
               </motion.div>
 
               <motion.div
-                className="  relative overflow-visible  hover:-translate-y-1 px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg  m-10 cursor-pointer "
+                className="relative overflow-visible hover:-translate-y-1 px-2 sm:px-6 md:px-12 shadow-xl bg-background/30 after:content-[''] after:absolute after:rounded-full after:inset-0 after:bg-background/40 after:z-[-1] after:transition after:!duration-500 hover:after:scale-150 hover:after:opacity-0 hover:bg-teal-600 bg-gray-200 dark:bg-gray-600 p-4 rounded-lg m-2 sm:m-6 md:m-10 cursor-pointer"
                 initial={{ opacity: 0, y: 150 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: 0.3 }}
@@ -206,23 +210,29 @@ const App = () => {
                   Soft skills
                 </h3>
                 <ul className="m-1  mx-10 text-start ">
-                  <li className="font-semibold mb-2 text-xl">Créativité</li>
-                  <li className="font-semibold mb-2 text-xl">Autonomie</li>
-                  <li className="font-semibold mb-2 text-xl">Sens du détail</li>
-                  <li className="font-semibold mb-2 text-xl">Conformisme</li>
+                  <li className="font-semibold mb-2 text-xl">
+                    Communication orale
+                  </li>
+                  <li className="font-semibold mb-2 text-xl">
+                    Esprit d'équipe
+                  </li>
                   <li className="font-semibold mb-2 text-xl">Adaptabilité</li>
                   <li className="font-semibold mb-2 text-xl">
-                    Travail en équipe
+                    Esprit critique
+                  </li>
+                  <li className="font-semibold mb-2 text-xl">Sens du détail</li>
+                  <li className="font-semibold mb-2 text-xl">
+                    Gestion & Analyse
                   </li>
                 </ul>
               </motion.div>
             </div>
-            <a
+            {/* <a
               href="#contact"
               className=" h-6 hover:bg-red-900  bg-red-400 text-white font-bold py-2 px-4 rounded mt-8"
             >
               Contactez-moi
-            </a>
+            </a> */}
           </div>
         </section>
         <section className="py-16 px-4 bg-gray-100 dark:bg-gray-600 w-full rounded-3xl ">
@@ -249,22 +259,19 @@ const App = () => {
                   Septembre 2024 - Juin 2025
                 </p>
                 <p className="mt-2 text-start">
-                  Développement de sites web réactifs et performants. Framework
-                  React, Symfony.
-                </p>
-                <p className="mt-2 text-start">
-                  Apprentissage des technologies modernes de développement web.
-                  Travail collaboratif avec Github.
-                </p>
-                <p className="mt-2 text-start">
-                  Front-end : HTML, CSS, JavaScript, Sass, Bootstrap,
+                  Front-end : HTML, CSS, JavaScript, Sass, Bootstrap et
                   TailwindCSS.
                 </p>
+                <p className="mt-2 text-start">Back-end : PHP, SQL, NoSQL.</p>
                 <p className="mt-2 text-start">
-                  Back-end : PHP, MySQL, NoSQL, Symfony.
+                  Développement de sites web réactifs et performants avec des
+                  frameworks tels que ReactJS et Symfony.
                 </p>
                 <p className="mt-2 text-start">
-                  Maquettage de site avec Figma.
+                  Outil de versioning avec Git / Github.
+                </p>
+                <p className="mt-2 text-start">
+                  Maquettage et prototypage de site avec Figma.
                 </p>
               </motion.div>
 
@@ -296,7 +303,7 @@ const App = () => {
                   Septembre 2023 - Août 2024
                 </p>
                 <p className="mt-2 text-start">
-                  Exploiter un cahier des charges d’un chantier réseaux
+                  Exploiter un cahier des charges d'un chantier réseaux
                   télécoms.
                 </p>
                 <p className="mt-2 text-start">
@@ -304,7 +311,7 @@ const App = () => {
                   respect des normes.
                 </p>
                 <p className="mt-2 text-start">
-                  Réaliser la recette d’un chantier réseaux télécoms et
+                  Réaliser la recette d'un chantier réseaux télécoms et
                   superviser les opérations de maintenance.
                 </p>
               </motion.div>
@@ -354,11 +361,11 @@ const App = () => {
                   Juin 2004 - Juillet 2015
                 </p>
                 <p className="mt-2 text-start">
-                  Assurer la conduite des systèmes d’information et de
+                  Assurer la conduite des systèmes d'information et de
                   communication.
                 </p>
                 <p className="mt-2 text-start">
-                  Garantir la continuité de service des systèmes d’information,
+                  Garantir la continuité de service des systèmes d'information,
                   de communication et des réseaux.
                 </p>
                 <p className="mt-2 text-start">Gestion de stock.</p>
@@ -367,10 +374,10 @@ const App = () => {
             </div>
             <div className="flex mt-10 flex-col space-y-8 shadow-neutral-800-60 dark:shadow-neutral-800-50">
               <a
-                href="/cv/CV Stephen Développeur Web 2025.pdf"
+                href="/cv/CV B3 Neutre- Stephen Développeur Web 2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4  rounded"
+                className="bg-gray-800 hover:text-gray-800 hover:bg-gray-300 text-white font-bold py-2 px-4  rounded"
               >
                 Charger mon CV
               </a>
@@ -418,87 +425,18 @@ const App = () => {
             </div>
           </div>
         </section>
-        <section
-          id="contact"
-          className="py-16 px-4 bg-gray-100 dark:bg-gray-700 w-full"
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            {/* <h2 className="text-3xl font-bold mb-8">Contactez-moi</h2> */}
-            <h2 className="text-2xl font-bold text-red-400 mb-8">
-              "Le serveur de messagerie est en cours de maintenance !"
-            </h2>
-            <h2 className="text-2xl font-bold text-gray-50-400 mb-8">
-              "Veuillez me contacter via mes coordonnées en bas de page"
-            </h2>
-            <form className="max-w-md mx-auto">
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className=" text-start block text-l font-semibold"
+        {/* <section
+                  id="contact"
+                  className="py-16 px-4 bg-gray-100 dark:bg-gray-700 w-full rounded-t-3xl"
                 >
-                  Nom
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Saisir votre nom"
-                  className="text-white mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className="text-start block text-l font-semibold"
-                >
-                  Prénom
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Saisir votre prénom"
-                  className="text-white mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className="text-start font-semibold block text-l "
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="Saisir votre email"
-                  id="email"
-                  className=" text-white mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className="  text-start font-semibold block text-l "
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  placeholder="Saisir votre message"
-                  className="  text-white mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                  rows={10}
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="bg-red-400 hover:bg-red-900 text-white font-bold py-2 px-4 rounded"
-              >
-                Envoyer
-              </button>
-            </form>
-          </div>
-        </section>
+                  <ContactForm />
+                </section> */}
       </main>
 
-      <footer className="flex flex-col justify-evenly py-1 px-1 bg-gray-200 dark:bg-gray-900 text-center w-full">
+      <footer
+        id="contact"
+        className="flex flex-col justify-evenly py-1 px-1 bg-gray-200 dark:bg-gray-900 text-center w-full"
+      >
         <div className="mb-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 justify-items-center align-middle items-center">
           <a
             href="https://github.com/stephen-ins"
