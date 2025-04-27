@@ -374,7 +374,7 @@ const App = () => {
             </div>
             <div className="flex mt-10 flex-col space-y-8 shadow-neutral-800-60 dark:shadow-neutral-800-50">
               <a
-                href="/public/cv/CV B3 ENI- Stephen WebDev alternance 2025.pdf"
+                href="cv/CV B3 ENI- Stephen WebDev alternance 2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 hover:text-gray-800 hover:bg-gray-300 text-white font-bold py-2 px-4  rounded"
