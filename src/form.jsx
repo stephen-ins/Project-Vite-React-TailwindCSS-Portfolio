@@ -12,6 +12,10 @@ const ContactForm = () => {
     message: "",
   });
 
+  // Ajout d'un état pour le message de confirmation/erreur
+  const [notificationMessage, setNotificationMessage] = useState("");
+  const [isNotificationSuccess, setIsNotificationSuccess] = useState(true);
+
   // - La fonction pour modifier la valeur actuelle de l'état, ici handleChange qui prend un événement en paramètre et met à jour la valeur de l'état correspondante
   const handleChange = (e) => {
     // On met à jour la valeur de l'état avec les nouvelles données du formulaire
@@ -21,6 +25,9 @@ const ContactForm = () => {
   // - La fonction pour soumettre le formulaire, ici handleSubmit qui prend un événement en paramètre et effectue une requête POST avec les données du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Réinitialiser le message de notification
+    setNotificationMessage("");
 
     try {
       // On utilise l'API Fetch pour envoyer les données du formulaire à l'URL spécifiée
@@ -42,16 +49,23 @@ const ContactForm = () => {
       const data = await response.json();
       // Si la réponse de l'API est un succès, on affiche un message de confirmation et on réinitialise les données du formulaire
       if (data.success) {
-        alert("Message envoyé avec succès !");
+        setIsNotificationSuccess(true);
+        setNotificationMessage(data.message || "Message envoyé avec succès !");
         setFormData({ lastName: "", firstName: "", email: "", message: "" });
       } else {
         // Si la réponse de l'API est un échec, on affiche un message d'erreur avec le message renvoyé par l'API
-        alert("Erreur : " + data.message);
+        setIsNotificationSuccess(false);
+        setNotificationMessage(
+          "Erreur : " + (data.message || "Une erreur est survenue")
+        );
       }
       // Dans quel cas on affiche une erreur ? : Si la requête Fetch échoue (par exemple si l'URL de l'API est incorrecte ou si le serveur ne répond pas)
     } catch (error) {
       console.error("Erreur:", error);
-      alert("Une erreur est survenue.");
+      setIsNotificationSuccess(false);
+      setNotificationMessage(
+        "Une erreur est survenue lors de l'envoi du message."
+      );
     }
   };
 
@@ -59,12 +73,21 @@ const ContactForm = () => {
     <div className="max-w-3xl mx-auto text-center roun">
       <h2 className="text-3xl font-bold mb-8">Contactez-moi</h2>
 
-      <h2 className="text-2xl font-bold text-red-400 mb-8">
+      {/* <h2 className="text-2xl font-bold text-red-400 mb-8">
         "Le serveur de messagerie est en cours de maintenance !"
       </h2>
       <h2 className="text-2xl font-bold text-gray-50-400 mb-8">
         "Veuillez me contacter via mes coordonnées en bas de page"
-      </h2>
+      </h2> */}
+
+      {/* Affichage du message de notification */}
+      {notificationMessage && (
+        <div
+          className={`mb-4 p-4 rounded-md ${isNotificationSuccess ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
+        >
+          {notificationMessage}
+        </div>
+      )}
 
       {/* On crée un formulaire avec les champs du formulaire (nom, prénom, email, message) et les fonctions handleChange et handleSubmit */}
       <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
